@@ -1,3 +1,15 @@
+This fork adds the following improvements:
+  - moved everything to a __single folder__ for cleaner organization (this also allows changing the load order and so that scripts that depend on other scripts can be loaded after those dependencies are loaded)
+  - added __explicit profiles__ `mpvi` in both `mpv.conf` and and `input.conf` to allow people to copy&paste configs to their own profiles
+  - converted configs to a more ergonomic syntax-highlighted `YAML` (though an older version due to lua's outdated libraries) that also allows tabular formatting with comments and doesn't bug if you add a ` `space before `=`
+  - added the more ergonomic OKHSL/OKHSV and HSL/HSV color spaces instead of the ugly hex with reverted(!) BGR instead of RGB
+  - tweaked input formatting of other values to remove the need to add `,` in `92,92`, a space is fine (though it should be flexible and auto-detect `,` as well)
+  - also added the option to change OSD colors in the same more ergonomic color way in the status line configs
+  - added a limit on how much the pic can go outside (so you can't move the pic further if it's already invisible, so even spamming a movement key won't move the image too far outside the viewing area)
+  - fixed an [issue](https://github.com/occivink/mpv-image-viewer/issues/26) where align-border not fully aligned on smaller pics 
+  - fixed an [issue](https://github.com/occivink/mpv-image-viewer/issues/25) where osd-dimensions would not get loaded in time for align_border
+  - a few more tweaks (changed a few default colors while testing, added a few more movement keybinds)
+
 This repository aggregates configurations, scripts and tips for using [mpv](https://github.com/mpv-player/mpv) as an image viewer. The affectionate nickname `mvi` is given to mpv in such case.
 
 This README assumes basic familiarity with mpv and its configuration. The information here should be platform-agnostic for the most part.
