@@ -1,5 +1,5 @@
 This fork adds the following improvements:
-  - moved everything to a __single folder__ for cleaner organization (this also allows changing the load order and so that scripts that depend on other scripts can be loaded after those dependencies are loaded)
+  - moved everything to a __single folder__ for cleaner organization (also allows changing the load order so that scripts that depend on other scripts can be loaded after those dependencies are loaded)
   - added __explicit profiles__ `mpvi` in both `mpv.conf` and and `input.conf` to allow people to copy&paste configs to their own profiles
   - converted configs to a more ergonomic syntax-highlighted `YAML` (though an older version due to lua's outdated libraries) that also allows tabular formatting with comments and doesn't bug if you add a ` `space before `=`
   - added the more ergonomic OKHSL/OKHSV and HSL/HSV color spaces instead of the ugly hex with reverted(!) BGR instead of RGB
